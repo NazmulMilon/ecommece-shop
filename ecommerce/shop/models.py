@@ -34,6 +34,7 @@ class Product(models.Model):
     available = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+    quantity = models.PositiveIntegerField(default=0)
 
     class Meta:
         ordering = ('name',)
@@ -45,7 +46,3 @@ class Product(models.Model):
     def get_absolute_url(self):
         return reverse('shop:product_detail',
                        args=[self.id, self.slug])
-
-
-
-

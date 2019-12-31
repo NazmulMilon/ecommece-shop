@@ -1,188 +1,194 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8" />
-    <title>{% block title %}My shop{% endblock %}</title>
-    <link href="{% static "css/base.css" %}" rel="stylesheet">
-    <link rel="shortcut icon" type="image/png" href="{% static 'image/login.png' %}"/>
-    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
-    <link rel='stylesheet' href=" {% static 'css/font-awesome.min.css' %}"/>
-{#    <link rel="stylesheet" href="{% static 'css/login.css' %}"/>#}
+  <meta charset="utf-8" />
+  <title>{% block title %}My shop{% endblock %}</title>
+  <link href="{% static "css/base.css" %}" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="{% static 'image/login.png' %}" />
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+  <link rel='stylesheet' href=" {% static 'css/font-awesome.min.css' %}" />
+  {#    <link rel="stylesheet" href="{% static 'css/login.css' %}"/>#}
 </head>
+
 <body>
-{#    <div id="header">#}
-{#        <a href="/" class="logo">My shop</a>#}
-{#    </div>#}
+  {#    <div id="header">#}
+  {#        <a href="/" class="logo">My shop</a>#}
+  {#    </div>#}
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/">Grande</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">Grande</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-      </li>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
 
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Categories
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Laptop</a>
-          <a class="dropdown-item" href="#">Smart Phone</a>
-          <a class="dropdown-item" href="#">Electronics</a>
-          <a class="dropdown-item" href="#">Computer Accesories</a>
-          <a class="dropdown-item" href="#">Mobile Accesories </a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Categories
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Laptop</a>
+            <a class="dropdown-item" href="#">Smart Phone</a>
+            <a class="dropdown-item" href="#">Electronics</a>
+            <a class="dropdown-item" href="#">Computer Accesories</a>
+            <a class="dropdown-item" href="#">Mobile Accesories </a>
             <div class="dropdown-divider"></div>
-        </div>
-      </li>
+          </div>
+        </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
-      </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
 
-      <li class="nav-item">
-        <a class="nav-link " href="#">Contact</a>
-      </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#">Contact</a>
+        </li>
 
-    </ul>
-    <form class="form-inline my-2 my-lg-0" style="margin: 50px;">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+      </ul>
+      <form class="form-inline my-2 my-lg-0" style="margin: 50px;">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
       <div class="auth">
-          <p class="signin" style="text-decoration: none;"><a href="signin">SignIn</a> || <a href="accounts/register">Register</a></p>
+        <p class="signin" style="text-decoration: none;"><a href="accounts/login">SignIn</a> || <a
+            href="accounts/register">Register</a></p>
       </div>
+    </div>
+  </nav>
+  <div id="subheader">
+    <div class="cart">
+      {% with total_items=cart|length %}
+      {% if cart|length > 0 %}
+      Your cart:
+      <a href="{% url "cart:cart_detail" %}">
+        {{ total_items }} item{{ total_items|pluralize }},
+        BDT {{ cart.get_total_price }}
+      </a>
+      {% else %}
+      Your cart is empty.
+      {% endif %}
+      {% endwith %}
+    </div>
   </div>
-</nav>
-    <div id="subheader">
-        <div class="cart">
-            {% with total_items=cart|length %}
-                {% if cart|length > 0 %}
-                    Your cart:
-                    <a href="{% url "cart:cart_detail" %}">
-                        {{ total_items }} item{{ total_items|pluralize }},
-                        ${{ cart.get_total_price }}
-                    </a>
-                {% else %}
-                    Your cart is empty.
-                {% endif %}
-            {% endwith %}
-        </div>
-    </div>
-    <div id="content">
-        {% block content %}
-        {% endblock %}
-    </div>
-<div class="footer_class" style="background-color:#737373">
+  <div id="content">
+    {% block content %}
+    {% endblock %}
+  </div>
+  <div class="footer_class" style="background-color:#737373">
     <!-- Footer -->
-<footer class="page-footer font-small indigo">
+    <footer class="page-footer font-small indigo">
 
-  <!-- Footer Links -->
-  <div class="container text-center text-md-left">
+      <!-- Footer Links -->
+      <div class="container text-center text-md-left">
 
-    <!-- Grid row -->
-    <div class="row">
+        <!-- Grid row -->
+        <div class="row">
 
-      <!-- Grid column -->
-      <div class="col-md-3 mx-auto">
+          <!-- Grid column -->
+          <div class="col-md-3 mx-auto">
 
-        <!-- Links -->
-        <h5 class="font-weight-bold text mt-3 mb-4">Links</h5>
+            <!-- Links -->
+            <h5 class="font-weight-bold text mt-3 mb-4">Links</h5>
 
-        <ul class="list-unstyled">
-          <li>
-            <a href="#!">Our Blog - The Lounge</a></li>
-            <li><a href="#!">Grande Happy Hour</a></li>
-            <li><a href="#!">Weekly Deals</a></li>
-            <li><a href="#!">Gift a Bagdoom Voucher</a></li>
-            <li><a href="#!">How to Buy</a></li>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">Our Blog - The Lounge</a></li>
+              <li><a href="#!">Grande Happy Hour</a></li>
+              <li><a href="#!">Weekly Deals</a></li>
+              <li><a href="#!">Gift a Bagdoom Voucher</a></li>
+              <li><a href="#!">How to Buy</a></li>
 
 
-        </ul>
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+
+          <hr class="clearfix w-100 d-md-none">
+
+          <!-- Grid column -->
+          <div class="col-md-3 mx-auto">
+
+            <!-- Links -->
+            <h5 class="font-weight-bold text mt-3 mb-4">Our Top Categories</h5>
+
+            <ul class="list-unstyled">
+              <li><a href="">Smart Phone</a></li>
+              <li><a href="#!">Laptop</a></li>
+              <li><a href="#!">Electronics</a></li>
+              <li><a href="#!">Computer Accesories</a></li>
+              <li><a href="#!">Mobile Accesories</a></li>
+
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+
+          <hr class="clearfix w-100 d-md-none">
+
+          <!-- Grid column -->
+          <div class="col-md-3 mx-auto">
+
+            <!-- Links -->
+            <h5 class="font-weight-bold text- mt-3 mb-4">Our Communities </h5>
+
+            <ul class="list-unstyled">
+              <li><a href="#!">Facebook</a></li>
+              <li><a href="#!">Instagram</a></li>
+              <li><a href="#!">LinkedIn</a></li>
+              <li><a href="#!">Twitter</a></li>
+              <li><a href="#!">YouTube</a></li>
+
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+
+          <hr class="clearfix w-100 d-md-none">
+
+          <!-- Grid column -->
+          <div class="col-md-3 mx-auto">
+
+            <!-- Links -->
+            <h5 class="font-weight-bold text mt-3 mb-4">Sell your products through us</h5>
+
+            <ul class="list-unstyled">
+              <li><a href="#!">Sell Product</a></li>
+
+
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
 
       </div>
-      <!-- Grid column -->
+      <!-- Footer Links -->
 
-      <hr class="clearfix w-100 d-md-none">
-
-      <!-- Grid column -->
-      <div class="col-md-3 mx-auto">
-
-        <!-- Links -->
-        <h5 class="font-weight-bold text mt-3 mb-4">Our Top Categories</h5>
-
-        <ul class="list-unstyled">
-          <li><a href="">Smart Phone</a></li>
-          <li><a href="#!">Laptop</a></li>
-          <li><a href="#!">Electronics</a></li>
-          <li><a href="#!">Computer Accesories</a></li>
-          <li><a href="#!">Mobile Accesories</a></li>
-
-        </ul>
-
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">© 2019 Nazmul Hasan Milon
       </div>
-      <!-- Grid column -->
+      <!-- Copyright -->
 
-      <hr class="clearfix w-100 d-md-none">
-
-      <!-- Grid column -->
-      <div class="col-md-3 mx-auto">
-
-        <!-- Links -->
-        <h5 class="font-weight-bold text- mt-3 mb-4">Our Communities </h5>
-
-        <ul class="list-unstyled">
-          <li><a href="#!">Facebook</a></li>
-          <li><a href="#!">Instagram</a></li>
-          <li><a href="#!">LinkedIn</a></li>
-          <li><a href="#!">Twitter</a></li>
-          <li><a href="#!">YouTube</a></li>
-
-        </ul>
-
-      </div>
-      <!-- Grid column -->
-
-      <hr class="clearfix w-100 d-md-none">
-
-      <!-- Grid column -->
-      <div class="col-md-3 mx-auto">
-
-        <!-- Links -->
-        <h5 class="font-weight-bold text mt-3 mb-4">Sell your products through us</h5>
-
-        <ul class="list-unstyled">
-          <li><a href="#!">Sell Product</a></li>
-
-
-        </ul>
-
-      </div>
-      <!-- Grid column -->
-
-    </div>
-    <!-- Grid row -->
+    </footer>
+    <!-- Footer -->
 
   </div>
-  <!-- Footer Links -->
 
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2019 Nazmul Hasan Milon
-  </div>
-  <!-- Copyright -->
-
-</footer>
-<!-- Footer -->
-
-</div>
-
-<script src="{% static 'js/jquery.js' %}"></script>
-<script src="{% static 'js/fontawesome.min.js' %}"></script>
-<script src="{% static  'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/jquery.js' %}"></script>
+  <script src="{% static 'js/fontawesome.min.js' %}"></script>
+  <script src="{% static  'js/bootstrap.min.js' %}"></script>
 </body>
+
 </html>
