@@ -1,5 +1,7 @@
 from django.urls import reverse
 from django.shortcuts import render, redirect
+
+from shop.models import Product
 from .models import OrderItem
 from .forms import OrderCreateForm
 from cart.cart import Cart
@@ -15,6 +17,8 @@ import weasyprint
 
 def order_create(request):
     cart = Cart(request)
+    msg = ''
+
     if request.method == 'POST':
         form = OrderCreateForm(request.POST)
         if form.is_valid():
@@ -24,6 +28,20 @@ def order_create(request):
                                          product=item['product'],
                                          price=item['price'],
                                          quantity=item['quantity'])
+                id_ = item['product'].id
+                quantity = item['quantity']
+                product = Product.objects.filter(id=id_)
+                for item in product:
+                    if item.quantity > 0:
+                        item.quantity -= quantity
+                        item.save()
+                    else:
+                        msg = 'Insufficient Found !'
+                        if msg != '':
+                            return render(request,
+                                          'orders/order/created.html',
+                                          {'msg': msg})
+
             # clear the cart
             cart.clear()
             # launch asynchronous task
@@ -32,6 +50,8 @@ def order_create(request):
             request.session['order_id'] = order.id
             # redirect for payment
             return redirect(reverse('payment:process'))
+
+
     else:
         form = OrderCreateForm()
     return render(request,
@@ -55,6 +75,6 @@ def admin_order_pdf(request, order_id):
     response = HttpResponse(content_type='application/pdf')
     response['Content-Disposition'] = 'filename=order_{}.pdf"'.format(order.id)
     weasyprint.HTML(string=html).write_pdf(response,
-        stylesheets=[weasyprint.CSS(
-            settings.STATIC_ROOT + 'css/pdf.css')])
+                                           stylesheets=[weasyprint.CSS(
+                                               settings.STATIC_ROOT + 'css/pdf.css')])
     return response

@@ -1,8 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99894938-64ec-46d0-9c98-252ae31699af" name="Default Changelist" comment="">
+    <list default="true" id="0308e69a-747a-4f7a-94ce-9d0456ed10bd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/accounts/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/templates/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/templates/registration/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/pdf.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myshop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/myshop/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myshop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/myshop/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/templates/orders/order/created.html" beforeDir="false" afterPath="$PROJECT_DIR$/orders/templates/orders/order/created.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/payment/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/templates/shop/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/shop/templates/shop/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,24 +32,10 @@
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-        <option value="HTML File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$/.." value="master" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="ProjectId" id="1UnptK2L4PNwitdpYrMyWPyiIUl" />
+  <component name="ProjectId" id="1VkovpeCK0tJb16Ga7SHHeWMvV7" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -37,25 +43,21 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/accounts/templates/auth" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/shop/static/js" />
-      <recent name="$PROJECT_DIR$/shop/static/css" />
+      <recent name="$PROJECT_DIR$/static" />
+      <recent name="$PROJECT_DIR$/shop" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="myshop" type="Python.DjangoServer" factoryName="Django server">
-      <module name="myshop" />
+    <configuration name="ecommerce" type="Python.DjangoServer" factoryName="Django server">
+      <module name="ecommerce" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -96,114 +98,165 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="99894938-64ec-46d0-9c98-252ae31699af" name="Default Changelist" comment="" />
-      <created>1576002426774</created>
+      <changelist id="0308e69a-747a-4f7a-94ce-9d0456ed10bd" name="Default Changelist" comment="" />
+      <created>1577806686356</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1576002426774</updated>
-      <workItem from="1576002428727" duration="6454000" />
-      <workItem from="1576009429956" duration="631000" />
-      <workItem from="1576037517598" duration="3106000" />
-      <workItem from="1576053039684" duration="666000" />
-      <workItem from="1577797748966" duration="4892000" />
-      <workItem from="1577803497620" duration="802000" />
+      <updated>1577806686356</updated>
+      <workItem from="1577806687650" duration="6000" />
+      <workItem from="1577806696117" duration="4806000" />
     </task>
-    <task id="LOCAL-00001" summary="payment method integrated.">
-      <created>1577804265982</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1577804265982</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="payment method integrated." />
-    <option name="LAST_COMMIT_MESSAGE" value="payment method integrated." />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="551" y="78" width="643" height="592" key="#xdebugger.evaluate" timestamp="1576006892825">
+    <state x="141" y="33" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577806704843">
       <screen x="0" y="27" width="1366" height="696" />
     </state>
-    <state x="551" y="78" width="643" height="592" key="#xdebugger.evaluate/0.27.1366.696@0.27.1366.696" timestamp="1576006892825" />
-    <state x="142" y="27" width="1072" height="695" key="CommitChangelistDialog2" timestamp="1577804511867">
+    <state x="141" y="33" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1366.696@0.27.1366.696" timestamp="1577806704843" />
+    <state x="1772" y="212" width="676" height="377" key="#xdebugger.evaluate" timestamp="1577811611136">
+      <screen x="0" y="27" width="2732" height="696" />
+    </state>
+    <state x="1772" y="212" width="676" height="377" key="#xdebugger.evaluate/0.27.2732.696@0.27.2732.696" timestamp="1577811611136" />
+    <state x="456" y="132" width="424" height="483" key="FileChooserDialogImpl" timestamp="1577806744990">
       <screen x="0" y="27" width="1366" height="696" />
     </state>
-    <state x="142" y="27" width="1072" height="695" key="CommitChangelistDialog2/0.27.1366.696@0.27.1366.696" timestamp="1577804511867" />
-    <state x="456" y="132" width="424" height="483" key="FileChooserDialogImpl" timestamp="1576002551990">
+    <state x="456" y="132" width="424" height="483" key="FileChooserDialogImpl/0.27.1366.696@0.27.1366.696" timestamp="1577806744990" />
+    <state width="1320" height="143" key="GridCell.Tab.0.bottom" timestamp="1577811781251">
+      <screen x="0" y="27" width="2732" height="696" />
+    </state>
+    <state width="1320" height="143" key="GridCell.Tab.0.bottom/0.27.2732.696@0.27.2732.696" timestamp="1577811781251" />
+    <state width="1320" height="143" key="GridCell.Tab.0.center" timestamp="1577811781251">
+      <screen x="0" y="27" width="2732" height="696" />
+    </state>
+    <state width="1320" height="143" key="GridCell.Tab.0.center/0.27.2732.696@0.27.2732.696" timestamp="1577811781251" />
+    <state width="1320" height="143" key="GridCell.Tab.0.left" timestamp="1577811781251">
+      <screen x="0" y="27" width="2732" height="696" />
+    </state>
+    <state width="1320" height="143" key="GridCell.Tab.0.left/0.27.2732.696@0.27.2732.696" timestamp="1577811781251" />
+    <state width="1320" height="143" key="GridCell.Tab.0.right" timestamp="1577811781251">
+      <screen x="0" y="27" width="2732" height="696" />
+    </state>
+    <state width="1320" height="143" key="GridCell.Tab.0.right/0.27.2732.696@0.27.2732.696" timestamp="1577811781251" />
+    <state width="1320" height="143" key="GridCell.Tab.1.bottom" timestamp="1577811781253">
+      <screen x="0" y="27" width="2732" height="696" />
+    </state>
+    <state width="1320" height="143" key="GridCell.Tab.1.bottom/0.27.2732.696@0.27.2732.696" timestamp="1577811781253" />
+    <state width="1320" height="143" key="GridCell.Tab.1.center" timestamp="1577811781252">
+      <screen x="0" y="27" width="2732" height="696" />
+    </state>
+    <state width="1320" height="143" key="GridCell.Tab.1.center/0.27.2732.696@0.27.2732.696" timestamp="1577811781252" />
+    <state width="1320" height="143" key="GridCell.Tab.1.left" timestamp="1577811781252">
+      <screen x="0" y="27" width="2732" height="696" />
+    </state>
+    <state width="1320" height="143" key="GridCell.Tab.1.left/0.27.2732.696@0.27.2732.696" timestamp="1577811781252" />
+    <state width="1320" height="143" key="GridCell.Tab.1.right" timestamp="1577811781252">
+      <screen x="0" y="27" width="2732" height="696" />
+    </state>
+    <state width="1320" height="143" key="GridCell.Tab.1.right/0.27.2732.696@0.27.2732.696" timestamp="1577811781252" />
+    <state x="172" y="27" width="1012" height="696" key="SettingsEditor" timestamp="1577806748994">
       <screen x="0" y="27" width="1366" height="696" />
     </state>
-    <state x="456" y="132" width="424" height="483" key="FileChooserDialogImpl/0.27.1366.696@0.27.1366.696" timestamp="1576002551990" />
-    <state width="1320" height="198" key="GridCell.Tab.0.bottom" timestamp="1577804199980">
+    <state x="172" y="27" width="1012" height="696" key="SettingsEditor/0.27.1366.696@0.27.1366.696" timestamp="1577806748994" />
+    <state x="339" y="202" key="com.intellij.ide.util.TipDialog" timestamp="1577812361640">
       <screen x="0" y="27" width="1366" height="696" />
     </state>
-    <state width="1320" height="198" key="GridCell.Tab.0.bottom/0.27.1366.696@0.27.1366.696" timestamp="1577804199980" />
-    <state width="1320" height="198" key="GridCell.Tab.0.center" timestamp="1577804199979">
-      <screen x="0" y="27" width="1366" height="696" />
+    <state x="339" y="202" key="com.intellij.ide.util.TipDialog/0.27.1366.696/1366.0.1366.768@0.27.1366.696" timestamp="1577812361640" />
+    <state x="1695" y="27" width="714" height="696" key="find.popup" timestamp="1577810388591">
+      <screen x="0" y="27" width="2732" height="696" />
     </state>
-    <state width="1320" height="198" key="GridCell.Tab.0.center/0.27.1366.696@0.27.1366.696" timestamp="1577804199979" />
-    <state width="1320" height="198" key="GridCell.Tab.0.left" timestamp="1577804199979">
-      <screen x="0" y="27" width="1366" height="696" />
+    <state x="1695" y="27" width="714" height="696" key="find.popup/0.27.2732.696@0.27.2732.696" timestamp="1577810388591" />
+    <state x="1712" y="44" width="672" height="678" key="search.everywhere.popup" timestamp="1577810352677">
+      <screen x="0" y="27" width="2732" height="696" />
     </state>
-    <state width="1320" height="198" key="GridCell.Tab.0.left/0.27.1366.696@0.27.1366.696" timestamp="1577804199979" />
-    <state width="1320" height="198" key="GridCell.Tab.0.right" timestamp="1577804199979">
-      <screen x="0" y="27" width="1366" height="696" />
-    </state>
-    <state width="1320" height="198" key="GridCell.Tab.0.right/0.27.1366.696@0.27.1366.696" timestamp="1577804199979" />
-    <state width="1320" height="200" key="GridCell.Tab.1.bottom" timestamp="1576006923004">
-      <screen x="0" y="27" width="1366" height="696" />
-    </state>
-    <state width="1320" height="200" key="GridCell.Tab.1.bottom/0.27.1366.696@0.27.1366.696" timestamp="1576006923004" />
-    <state width="1320" height="200" key="GridCell.Tab.1.center" timestamp="1576006923004">
-      <screen x="0" y="27" width="1366" height="696" />
-    </state>
-    <state width="1320" height="200" key="GridCell.Tab.1.center/0.27.1366.696@0.27.1366.696" timestamp="1576006923004" />
-    <state width="1320" height="200" key="GridCell.Tab.1.left" timestamp="1576006923003">
-      <screen x="0" y="27" width="1366" height="696" />
-    </state>
-    <state width="1320" height="200" key="GridCell.Tab.1.left/0.27.1366.696@0.27.1366.696" timestamp="1576006923003" />
-    <state width="1320" height="200" key="GridCell.Tab.1.right" timestamp="1576006923004">
-      <screen x="0" y="27" width="1366" height="696" />
-    </state>
-    <state width="1320" height="200" key="GridCell.Tab.1.right/0.27.1366.696@0.27.1366.696" timestamp="1576006923004" />
-    <state x="172" y="27" width="1012" height="696" key="SettingsEditor" timestamp="1576002558270">
-      <screen x="0" y="27" width="1366" height="696" />
-    </state>
-    <state x="172" y="27" width="1012" height="696" key="SettingsEditor/0.27.1366.696@0.27.1366.696" timestamp="1576002558270" />
-    <state x="278" y="111" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1577804271467">
-      <screen x="0" y="27" width="1366" height="696" />
-    </state>
-    <state x="278" y="111" width="800" height="527" key="Vcs.Push.Dialog.v2/0.27.1366.696@0.27.1366.696" timestamp="1577804271467" />
-    <state x="473" y="111" width="400" height="525" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1577804506929">
-      <screen x="0" y="27" width="1366" height="696" />
-    </state>
-    <state x="473" y="111" width="400" height="525" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.27.1366.696@0.27.1366.696" timestamp="1577804506929" />
-    <state x="451" y="295" width="454" height="159" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1577804423194">
-      <screen x="0" y="27" width="1366" height="696" />
-    </state>
-    <state x="451" y="295" width="454" height="159" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1366.696@0.27.1366.696" timestamp="1577804423194" />
-    <state x="329" y="111" width="866" height="528" key="find.popup" timestamp="1577800898783">
-      <screen x="0" y="27" width="1366" height="696" />
-    </state>
-    <state x="329" y="111" width="866" height="528" key="find.popup/0.27.1366.696@0.27.1366.696" timestamp="1577800898783" />
-    <state x="409" y="89" width="537" height="571" key="git4idea.branch.GitSmartOperationDialog" timestamp="1577804449035">
-      <screen x="0" y="27" width="1366" height="696" />
-    </state>
-    <state x="409" y="89" width="537" height="571" key="git4idea.branch.GitSmartOperationDialog/0.27.1366.696@0.27.1366.696" timestamp="1577804449035" />
+    <state x="1712" y="44" width="672" height="678" key="search.everywhere.popup/0.27.2732.696@0.27.2732.696" timestamp="1577810352677" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/payment/views.py</url>
+          <line>10</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/payment/views.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/payment/views.py</url>
+          <line>17</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/payment/views.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/payment/views.py</url>
+          <line>28</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/payment/views.py</url>
+          <line>34</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/payment/views.py</url>
+          <line>40</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/payment/views.py</url>
+          <line>43</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/payment/views.py</url>
+          <line>68</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/payment/views.py</url>
+          <line>64</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/orders/views.py</url>
+          <line>30</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/orders/views.py</url>
+          <line>34</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/orders/views.py</url>
+          <line>32</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/orders/views.py</url>
+          <line>38</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/orders/views.py</url>
+          <line>19</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/orders/views.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

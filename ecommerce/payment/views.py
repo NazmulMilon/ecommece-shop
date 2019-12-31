@@ -34,7 +34,7 @@ def payment_process(request):
             message = 'Please, find attached the invoice for your recent purchase.'
             email = EmailMessage(subject,
                                  message,
-                                 'admin@myshop.com',
+                                 'roni@divine-it.net',
                                  [order.email])
 
             # generate PDF
