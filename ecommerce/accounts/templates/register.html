@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "shop/base.html" %}
 {% load static %}
 
 {% block title %}
@@ -19,6 +19,8 @@
           <div class="col-md-8 col-xm-12 offset-md-2">
             <div class="loginform">
               <h5>Stay Connected With Grendy</h5>
+                <br>
+                <span>{{ msg }}</span>
               <form action="register" method="post">
                   	{% csrf_token %}
 
@@ -31,11 +33,12 @@
                     <input type="text" class="form-control" name="last_name" placeholder="Last name">
                   </div>
                 </div>
+                  <br>
                 <div class="form-group">
-                  <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+                  <input type="email"  pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Enter email" required >
                 </div>
                   <div class="form-group">
-                  <input type="text" class="form-control" name="username" aria-describedby="emailHelp" placeholder="Enter Username">
+                  <input type="text" class="form-control" name="username" aria-describedby="emailHelp" placeholder="Enter Username" required>
                 </div>
                 <div class="form-group">
                   <input type="password" class="form-control" name="password1"  placeholder="Password">

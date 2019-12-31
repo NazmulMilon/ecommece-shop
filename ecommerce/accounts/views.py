@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 
 
 def register(request):
+    msg = ''
     if request.method == 'POST':
         first_name = request.POST['first_name']
         last_name = request.POST['last_name']
@@ -16,15 +17,17 @@ def register(request):
 
         if password1 == password2:
             if User.objects.filter(username=username).exists():
-                messages.info(request, 'Username Taken')
-                return redirect('register')
+                messages.info(request, 'Username Already Taken')
+                msg = 'Username Already Taken'
+                return redirect('/accounts/register')
             elif User.objects.filter(email=email).exists():
-                messages.info(request, 'Email Taken')
-                return redirect('register')
+                messages.info(request, 'Email Already Taken')
+                msg = 'Email Already Taken'
+                return redirect('/accounts/register')
             else:
                 user = User.objects.create_user(username=username, password=password1, email=email,first_name=first_name,last_name=last_name)
                 user.save();
-                print('user created')
+                msg = 'User Created Successfully'
 
-    return render(request, 'register.html')
+    return render(request, 'register.html', {'msg':msg})
 
