@@ -5,9 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounts/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounts/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/registration/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/templates/shop/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/shop/templates/shop/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +88,7 @@
       <updated>1577806686356</updated>
       <workItem from="1577806687650" duration="6000" />
       <workItem from="1577806696117" duration="4806000" />
-      <workItem from="1577812360062" duration="2693000" />
+      <workItem from="1577812360062" duration="3408000" />
     </task>
     <task id="LOCAL-00001" summary="Product quantity consumption functionality added.">
       <created>1577812523144</created>
@@ -99,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577812523144</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="code fix">
+      <created>1577819277593</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1577819277593</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,7 +112,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Product quantity consumption functionality added." />
-    <option name="LAST_COMMIT_MESSAGE" value="Product quantity consumption functionality added." />
+    <MESSAGE value="code fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="code fix" />
   </component>
   <component name="WindowStateProjectService">
     <state x="141" y="33" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577806704843">
@@ -119,10 +125,10 @@
     </state>
     <state x="1862" y="243" width="723" height="353" key="#xdebugger.evaluate/0.27.1366.696/1366.0.1366.768@1366.0.1366.768" timestamp="1577818326763" />
     <state x="1772" y="212" width="676" height="377" key="#xdebugger.evaluate/0.27.2732.696@0.27.2732.696" timestamp="1577811611136" />
-    <state x="1566" y="0" width="865" height="723" key="CommitChangelistDialog2" timestamp="1577812522540">
+    <state x="1566" y="0" width="865" height="723" key="CommitChangelistDialog2" timestamp="1577819277452">
       <screen x="1366" y="0" width="1366" height="768" />
     </state>
-    <state x="1566" y="0" width="865" height="723" key="CommitChangelistDialog2/0.27.1366.696/1366.0.1366.768@1366.0.1366.768" timestamp="1577812522540" />
+    <state x="1566" y="0" width="865" height="723" key="CommitChangelistDialog2/0.27.1366.696/1366.0.1366.768@1366.0.1366.768" timestamp="1577819277452" />
     <state x="456" y="132" width="424" height="483" key="FileChooserDialogImpl" timestamp="1577806744990">
       <screen x="0" y="27" width="1366" height="696" />
     </state>
@@ -171,18 +177,18 @@
       <screen x="0" y="27" width="1366" height="696" />
     </state>
     <state x="172" y="27" width="1012" height="696" key="SettingsEditor/0.27.1366.696@0.27.1366.696" timestamp="1577806748994" />
-    <state x="1644" y="97" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1577812527370">
+    <state x="1644" y="97" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1577819282178">
       <screen x="1366" y="0" width="1366" height="768" />
     </state>
-    <state x="1644" y="97" width="800" height="527" key="Vcs.Push.Dialog.v2/0.27.1366.696/1366.0.1366.768@1366.0.1366.768" timestamp="1577812527370" />
+    <state x="1644" y="97" width="800" height="527" key="Vcs.Push.Dialog.v2/0.27.1366.696/1366.0.1366.768@1366.0.1366.768" timestamp="1577819282178" />
     <state x="339" y="202" key="com.intellij.ide.util.TipDialog" timestamp="1577812361640">
       <screen x="0" y="27" width="1366" height="696" />
     </state>
     <state x="339" y="202" key="com.intellij.ide.util.TipDialog/0.27.1366.696/1366.0.1366.768@0.27.1366.696" timestamp="1577812361640" />
-    <state x="1838" y="98" width="400" height="525" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1577812415706">
+    <state x="1838" y="98" width="400" height="525" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1577819274866">
       <screen x="1366" y="0" width="1366" height="768" />
     </state>
-    <state x="1838" y="98" width="400" height="525" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.27.1366.696/1366.0.1366.768@1366.0.1366.768" timestamp="1577812415706" />
+    <state x="1838" y="98" width="400" height="525" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.27.1366.696/1366.0.1366.768@1366.0.1366.768" timestamp="1577819274866" />
     <state x="1695" y="27" width="714" height="696" key="find.popup" timestamp="1577810388591">
       <screen x="0" y="27" width="2732" height="696" />
     </state>
