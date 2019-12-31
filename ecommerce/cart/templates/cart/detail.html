@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "shop/base.html" %}
 {% load static %}
 
 {% block title %}
@@ -37,20 +37,22 @@
               </form>
             </td>
             <td><a href="{% url "cart:cart_remove" product.id %}">Remove</a></td>
-            <td class="num">BDT {{ item.price }}</td>
-            <td class="num">BDT {{ item.total_price }}</td>
+            <td class="num">${{ item.price }}</td>
+            <td class="num">${{ item.total_price }}</td>
           </tr>
         {% endwith %}
       {% endfor %}
       <tr class="total">
         <td>Total</td>
         <td colspan="4"></td>
-        <td class="num">BDT {{ cart.get_total_price }}</td>
+        <td class="num">${{ cart.get_total_price }}</td>
       </tr>
     </tbody>
   </table>
   <p class="text-right">
     <a href="{% url "shop:product_list" %}" class="button light">Continue shopping</a>
-    <a href="{% url "orders:order_create" %}" class="button"> Checkout </a>
+    <a href="{% url "orders:order_create" %}" class="button">
+      Checkout
+    </a>
   </p>
 {% endblock %}

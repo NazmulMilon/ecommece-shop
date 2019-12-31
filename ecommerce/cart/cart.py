@@ -4,8 +4,11 @@ from shop.models import Product
 
 
 class Cart(object):
+
     def __init__(self, request):
-        """Initialize the cart"""
+        """
+        Initialize the cart.
+        """
         self.session = request.session
         cart = self.session.get(settings.CART_SESSION_ID)
         if not cart:
@@ -15,7 +18,7 @@ class Cart(object):
 
     def __iter__(self):
         """
-        Iterate over the items in the cart and get the products
+        Iterate over the items in the cart and get the products 
         from the database.
         """
         product_ids = self.cart.keys()
@@ -30,7 +33,7 @@ class Cart(object):
             item['price'] = Decimal(item['price'])
             item['total_price'] = item['price'] * item['quantity']
             yield item
-
+    
     def __len__(self):
         """
         Count all items in the cart.
@@ -44,7 +47,7 @@ class Cart(object):
         product_id = str(product.id)
         if product_id not in self.cart:
             self.cart[product_id] = {'quantity': 0,
-                                     'price': str(product.price)}
+                                      'price': str(product.price)}
         if update_quantity:
             self.cart[product_id]['quantity'] = quantity
         else:
