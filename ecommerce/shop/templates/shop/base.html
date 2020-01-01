@@ -58,10 +58,22 @@
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
+       {% if request.user.is_authenticated %}
       <div class="auth">
-        <p class="signin" style="text-decoration: none;"><a href="/accounts/login">SignIn</a> || <a
-            href="/accounts/register">Register</a></p>
+        <p class="signin" style="text-decoration: none;">
+          <p>{{request.user.username}} || <a href="{% url 'accounts:logout' %}">Logout</a>
+
+          </p>
       </div>
+
+      {% else %}
+      <div class="auth">
+        <p class="signin" style="text-decoration: none;">
+          <a href="{% url 'accounts:login' %}">SignIn</a> || <a href="accounts/register">Register</a>
+
+        </p>
+      </div>
+      {% endif %}
     </div>
   </nav>
   <div id="subheader">
